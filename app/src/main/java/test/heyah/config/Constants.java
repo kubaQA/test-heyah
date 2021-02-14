@@ -1,7 +1,5 @@
 package test.heyah.config;
 
-import java.util.Optional;
-
 public class Constants {
     static final String BASE_URL = "https://sklep.heyah.pl/";
     static final String DRIVER_TYPE = "chrome";

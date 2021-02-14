@@ -2,6 +2,7 @@ package test.heyah.config;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import test.heyah.utils.WaitUtils;
 
@@ -19,5 +20,11 @@ public abstract class TestBase {
         driver.manage().window().maximize();
         driver.navigate().to(BASE_URL);
         waitUtils.waitUntilOnUrl(10, BASE_URL);
+    }
+
+    @AfterClass
+    public void tearDown() {
+        driver.close();
+        driver.quit();
     }
 }
